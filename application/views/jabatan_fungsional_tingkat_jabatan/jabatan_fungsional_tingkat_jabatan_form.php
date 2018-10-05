@@ -19,12 +19,15 @@
               
               
 	    <div class="form-group col-md-6">
-            <label for="int" class="control-label">Id Tingkat <?php echo form_error('id_tingkat') ?></label>
-            <input type="text" class="form-control" name="id_tingkat" id="id_tingkat" placeholder="Id Tingkat" value="<?php echo $id_tingkat; ?>" />
+            <label for="int" class="control-label">Tingkat <?php echo form_error('id_tingkat') ?></label>
+            
+<?php echo cmb_dinamis('id_tingkat',' jabatan_fungsional_judul','kata_pengantar','id',$id_tingkat); ?>
+            <!-- <?php echo cmb_dinamis('id_jabatan',' jabatans','nama_jabatan','id',$id_jabatan); ?> -->
         </div>
 	    <div class="form-group col-md-6">
-            <label for="int" class="control-label">Id Jabatan <?php echo form_error('id_jabatan') ?></label>
-            <input type="text" class="form-control" name="id_jabatan" id="id_jabatan" placeholder="Id Jabatan" value="<?php echo $id_jabatan; ?>" />
+            <label for="int" class="control-label">Jabatan <?php echo form_error('id_jabatan') ?></label>
+           <?php echo cmb_dinamis('id_jabatan',' jabatans','nama_jabatan','id',$id_jabatan); ?>
+            <!-- <?php echo cmb_dinamis('id_jabatan',' jabatans','nama_jabatan','id',$id_jabatan); ?> -->
         </div></div><div class="box-footer">
 	    <input type="hidden" name="id" value="<?php echo $id; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 

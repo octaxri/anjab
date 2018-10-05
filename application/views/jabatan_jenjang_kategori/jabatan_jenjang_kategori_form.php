@@ -19,11 +19,11 @@
               
               
 	    <div class="form-group col-md-6">
-            <label for="int" class="control-label">Id Jabatan <?php echo form_error('id_jabatan') ?></label>
-            <input type="text" class="form-control" name="id_jabatan" id="id_jabatan" placeholder="Id Jabatan" value="<?php echo $id_jabatan; ?>" />
+            <label for="int" class="control-label">Jabatan <?php echo form_error('id_jabatan') ?></label>
+            <?php echo cmb_dinamis('id_jabatan',' jabatans','nama_jabatan','id',$id_jabatan); ?>
         </div>
 	    <div class="form-group col-md-6">
-            <label for="int" class="control-label">Id Jenjang <?php echo form_error('id_jenjang') ?></label>
+            <label for="int" class="control-label">Jenjang <?php echo form_error('id_jenjang') ?></label>
             <input type="text" class="form-control" name="id_jenjang" id="id_jenjang" placeholder="Id Jenjang" value="<?php echo $id_jenjang; ?>" />
         </div>
 	    <div class="form-group col-md-6">

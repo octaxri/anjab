@@ -37,7 +37,6 @@
             <thead>
                 <tr>
                     <th width="80px">No</th>
-		    <th>Id</th>
 		    <th>Nama</th>
 		    <th>Nama Tabel</th>
 		    <th width="">Action</th>
@@ -83,9 +82,9 @@
                     ajax: {"url": "jabatan_fungsional_kelompok/json", "type": "POST"},
                     columns: [
                         {
-                            "data": "",
+                            "data": "id",
                             "orderable": false
-                        },{"data": "id"},{"data": "nama"},{"data": "nama_tabel"},
+                        },{"data": "nama"},{"data": "nama_tabel"},
                         {
                             "data" : "action",
                             "orderable": false,

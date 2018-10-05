@@ -65,7 +65,6 @@ class Jabatan_fungsional_kelompok extends CI_Controller
             $this->create();
         } else {
             $data = array(
-		'id' => $this->input->post('id',TRUE),
 		'nama' => $this->input->post('nama',TRUE),
 		'nama_tabel' => $this->input->post('nama_tabel',TRUE),
 	    );
@@ -100,15 +99,14 @@ class Jabatan_fungsional_kelompok extends CI_Controller
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
-            $this->update($this->input->post('', TRUE));
+            $this->update($this->input->post('id', TRUE));
         } else {
             $data = array(
-		'id' => $this->input->post('id',TRUE),
 		'nama' => $this->input->post('nama',TRUE),
 		'nama_tabel' => $this->input->post('nama_tabel',TRUE),
 	    );
 
-            $this->Jabatan_fungsional_kelompok_model->update($this->input->post('', TRUE), $data);
+            $this->Jabatan_fungsional_kelompok_model->update($this->input->post('id', TRUE), $data);
             $this->session->set_flashdata('message', 'Update Record Success');
             redirect(site_url('jabatan_fungsional_kelompok'));
         }
@@ -130,11 +128,10 @@ class Jabatan_fungsional_kelompok extends CI_Controller
 
     public function _rules() 
     {
-	$this->form_validation->set_rules('id', 'id', 'trim|required');
 	$this->form_validation->set_rules('nama', 'nama', 'trim|required');
 	$this->form_validation->set_rules('nama_tabel', 'nama tabel', 'trim|required');
 
-	$this->form_validation->set_rules('', '', 'trim');
+	$this->form_validation->set_rules('id', 'id', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
     }
 

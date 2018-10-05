@@ -19,10 +19,6 @@
               
               
 	    <div class="form-group col-md-6">
-            <label for="int" class="control-label">Id <?php echo form_error('id') ?></label>
-            <input type="text" class="form-control" name="id" id="id" placeholder="Id" value="<?php echo $id; ?>" />
-        </div>
-	    <div class="form-group col-md-6">
             <label for="nama" class="control-label">Nama <?php echo form_error('nama') ?></label>
             <textarea class="form-control" rows="3" name="nama" id="nama" placeholder="Nama"><?php echo $nama; ?></textarea>
         </div>
@@ -30,7 +26,7 @@
             <label for="nama_tabel" class="control-label">Nama Tabel <?php echo form_error('nama_tabel') ?></label>
             <textarea class="form-control" rows="3" name="nama_tabel" id="nama_tabel" placeholder="Nama Tabel"><?php echo $nama_tabel; ?></textarea>
         </div></div><div class="box-footer">
-	    <input type="hidden" name="" value="<?php echo $; ?>" /> 
+	    <input type="hidden" name="id" value="<?php echo $id; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
 	    <a href="<?php echo site_url('jabatan_fungsional_kelompok') ?>" class="btn btn-default">Cancel</a>
 	

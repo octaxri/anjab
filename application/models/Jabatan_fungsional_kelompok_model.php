@@ -7,7 +7,7 @@ class Jabatan_fungsional_kelompok_model extends CI_Model
 {
 
     public $table = 'jabatan_fungsional_kelompok';
-    public $id = '';
+    public $id = 'id';
     public $order = 'ASC';
 
     function __construct()
@@ -21,7 +21,7 @@ class Jabatan_fungsional_kelompok_model extends CI_Model
         $this->datatables->from('jabatan_fungsional_kelompok');
         //add this line for join
         //$this->datatables->join('table2', 'jabatan_fungsional_kelompok.field = table2.field');
-        $this->datatables->add_column('action', anchor(site_url('jabatan_fungsional_kelompok/update/$1'),'<i class="fa fa-pencil"></i>','class="btn btn-warning btn-xs"' )." ".anchor(site_url('jabatan_fungsional_kelompok/delete/$1'),'<i class="fa fa-trash"></i>','class="btn btn-danger btn-xs" onclick="javasciprt: return confirm(\'Apakah Anda Yakin Menghapus Data Ini ?\')"'), '');
+        $this->datatables->add_column('action', anchor(site_url('jabatan_fungsional_kelompok/update/$1'),'<i class="fa fa-pencil"></i>','class="btn btn-warning btn-xs"' )." ".anchor(site_url('jabatan_fungsional_kelompok/delete/$1'),'<i class="fa fa-trash"></i>','class="btn btn-danger btn-xs" onclick="javasciprt: return confirm(\'Apakah Anda Yakin Menghapus Data Ini ?\')"'), 'id');
         return $this->datatables->generate();
     }
 
@@ -41,8 +41,7 @@ class Jabatan_fungsional_kelompok_model extends CI_Model
     
     // get total rows
     function total_rows($q = NULL) {
-        $this->db->like('', $q);
-	$this->db->or_like('id', $q);
+        $this->db->like('id', $q);
 	$this->db->or_like('nama', $q);
 	$this->db->or_like('nama_tabel', $q);
 	$this->db->from($this->table);
@@ -52,8 +51,7 @@ class Jabatan_fungsional_kelompok_model extends CI_Model
     // get data with limit and search
     function get_limit_data($limit, $start = 0, $q = NULL) {
         $this->db->order_by($this->id, $this->order);
-        $this->db->like('', $q);
-	$this->db->or_like('id', $q);
+        $this->db->like('id', $q);
 	$this->db->or_like('nama', $q);
 	$this->db->or_like('nama_tabel', $q);
 	$this->db->limit($limit, $start);

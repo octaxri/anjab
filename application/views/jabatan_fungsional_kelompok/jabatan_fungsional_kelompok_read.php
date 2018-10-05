@@ -10,7 +10,6 @@
             </div>
         </div>
         <table class="table">
-	    <tr><td>Id</td><td><?php echo $id; ?></td></tr>
 	    <tr><td>Nama</td><td><?php echo $nama; ?></td></tr>
 	    <tr><td>Nama Tabel</td><td><?php echo $nama_tabel; ?></td></tr>
 	    <tr><td></td><td><a href="<?php echo site_url('jabatan_fungsional_kelompok') ?>" class="btn btn-default">Cancel</a></td></tr>
