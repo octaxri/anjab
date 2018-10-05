@@ -18,13 +18,15 @@
               <div class="row">
               
               
-	    <div class="form-group col-md-6">
-            <label for="int" class="control-label">Id Kategori <?php echo form_error('id_kategori') ?></label>
-            <input type="text" class="form-control" name="id_kategori" id="id_kategori" placeholder="Id Kategori" value="<?php echo $id_kategori; ?>" />
+	     <div class="form-group col-md-6">
+            <label for="int" class="control-label">Kategori <?php echo form_error('id_kategori') ?></label>
+            <?php echo cmb_dinamis('id_kategori',' jenjang_kategori','nama_kategori','id',$id_kategori); ?>
+            <!-- <input type="text" class="form-control" name="id_kategori" id="id_kategori" placeholder="Id Kategori" value="<?php echo $id_kategori; ?>" /> -->
         </div>
-	    <div class="form-group col-md-6">
-            <label for="int" class="control-label">Id Jabatan <?php echo form_error('id_jabatan') ?></label>
-            <input type="text" class="form-control" name="id_jabatan" id="id_jabatan" placeholder="Id Jabatan" value="<?php echo $id_jabatan; ?>" />
+	   <div class="form-group col-md-6">
+            <label for="int" class="control-label">Jabatan <?php echo form_error('id_jabatan') ?></label>
+            <?php echo cmb_dinamis('id_jabatan',' jabatans','nama_jabatan','id',$id_jabatan); ?>
+            <!-- <input type="text" class="form-control" name="id_jabatan" id="id_jabatan" placeholder="Id Jabatan" value="<?php echo $id_jabatan; ?>" /> -->
         </div></div><div class="box-footer">
 	    <input type="hidden" name="id" value="<?php echo $id; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
