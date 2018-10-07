@@ -9,7 +9,7 @@
       <!-- Default box -->
       <div class="box">
       
-        <div class="box-body">          <div class="box box-danger">
+        <div class="box-body">          <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Jabatan kode syarat <?php echo $button ?></h3>
             </div>
@@ -19,8 +19,8 @@
               
               
 	    <div class="form-group col-md-6">
-            <label for="int" class="control-label">Id Kode Pengangkatan <?php echo form_error('id_kode_pengangkatan') ?></label>
-            <input type="text" class="form-control" name="id_kode_pengangkatan" id="id_kode_pengangkatan" placeholder="Id Kode Pengangkatan" value="<?php echo $id_kode_pengangkatan; ?>" />
+            <label for="int" class="control-label">Kode Pengangkatan <?php echo form_error('id_kode_pengangkatan') ?></label>
+            <?php echo cmb_dinamis('id_kode_pengangkatan',' jabatan_kode_pengangkatan','kode','id',$id_kode_pengangkatan); ?>
         </div>
 	    <div class="form-group col-md-6">
             <label for="isi_syarat" class="control-label">Isi Syarat <?php echo form_error('isi_syarat') ?></label>

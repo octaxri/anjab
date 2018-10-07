@@ -9,7 +9,7 @@
       <!-- Default box -->
       <div class="box">
       
-        <div class="box-body">          <div class="box box-danger">
+        <div class="box-body">          <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Jabatan syarat pendidikan jft <?php echo $button ?></h3>
             </div>
@@ -23,12 +23,12 @@
             <?php echo cmb_dinamis('id_jabatan',' jabatans','nama_jabatan','id',$id_jabatan); ?>
         </div>
 	    <div class="form-group col-md-6">
-            <label for="int" class="control-label">Jpendidikan Id <?php echo form_error('jpendidikan_id') ?></label>
-            <input type="text" class="form-control" name="jpendidikan_id" id="jpendidikan_id" placeholder="Jpendidikan Id" value="<?php echo $jpendidikan_id; ?>" />
+            <label for="int" class="control-label">Jpendidikan <?php echo form_error('jpendidikan_id') ?></label>
+            <?php echo cmb_dinamis('jpendidikan_id','jpendidikans','nama','id',$jpendidikan_id); ?>
         </div>
 	    <div class="form-group col-md-6">
-            <label for="int" class="control-label">Bidang Id <?php echo form_error('bidang_id') ?></label>
-            <input type="text" class="form-control" name="bidang_id" id="bidang_id" placeholder="Bidang Id" value="<?php echo $bidang_id; ?>" />
+            <label for="int" class="control-label">Bidang <?php echo form_error('bidang_id') ?></label>
+            <?php echo cmb_dinamis('bidang_id','jurusan_bidang','nama_bidang','id',$bidang_id); ?>
         </div></div><div class="box-footer">
 	    <input type="hidden" name="id" value="<?php echo $id; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 

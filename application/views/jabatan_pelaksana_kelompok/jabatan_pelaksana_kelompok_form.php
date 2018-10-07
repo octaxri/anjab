@@ -9,7 +9,7 @@
       <!-- Default box -->
       <div class="box">
       
-        <div class="box-body">          <div class="box box-danger">
+        <div class="box-body">          <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Jabatan pelaksana kelompok <?php echo $button ?></h3>
             </div>
@@ -23,8 +23,8 @@
             <textarea class="form-control" rows="3" name="nama_kelompok" id="nama_kelompok" placeholder="Nama Kelompok"><?php echo $nama_kelompok; ?></textarea>
         </div>
 	    <div class="form-group col-md-6">
-            <label for="char" class="control-label">Id Kelas <?php echo form_error('id_kelas') ?></label>
-            <input type="text" class="form-control" name="id_kelas" id="id_kelas" placeholder="Id Kelas" value="<?php echo $id_kelas; ?>" />
+            <label for="char" class="control-label">Kelas <?php echo form_error('id_kelas') ?></label>
+           <?php echo cmb_dinamis('id_kelas',' kelas','kelas','id',$id_kelas); ?>
         </div></div><div class="box-footer">
 	    <input type="hidden" name="id" value="<?php echo $id; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 

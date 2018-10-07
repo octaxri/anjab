@@ -9,7 +9,7 @@
       <!-- Default box -->
       <div class="box">
       
-        <div class="box-body">          <div class="box box-danger">
+        <div class="box-body">          <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Migrations <?php echo $button ?></h3>
             </div>

@@ -9,7 +9,7 @@
       <!-- Default box -->
       <div class="box">
       
-        <div class="box-body">          <div class="box box-danger">
+        <div class="box-body">          <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Jabatan fungsional jenjang tingkat <?php echo $button ?></h3>
             </div>
@@ -21,7 +21,7 @@
 	    <div class="form-group col-md-6">
             <label for="int" class="control-label">Jenjang <?php echo form_error('id_jenjang') ?></label>
             <?php echo cmb_dinamis('id_jenjang',' jenjang','nama','id',$id_jenjang); ?>
-            <!-- <input type="text" class="form-control" name="id_jenjang" id="id_jenjang" placeholder="Id Jenjang" value="<?php echo $id_jenjang; ?>" /> -->
+            <!-- <?php echo cmb_dinamis('id_jenjang',' jenjang','nama','id',$id_jenjang); ?> -->
         </div>
 	    <div class="form-group col-md-6">
             <label for="int" class="control-label">Tingkat Jabatan <?php echo form_error('id_tingkat_jabatan') ?></label>

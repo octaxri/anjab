@@ -9,7 +9,7 @@
       <!-- Default box -->
       <div class="box">
       
-        <div class="box-body">          <div class="box box-danger">
+        <div class="box-body">          <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Jabatan fungsional jenjang golongan kredit <?php echo $button ?></h3>
             </div>
@@ -21,12 +21,12 @@
 	    <div class="form-group col-md-6">
             <label for="int" class="control-label">Golongan <?php echo form_error('id_golongan') ?></label>
              <?php echo cmb_dinamis('id_golongan',' golongans','nama_gol','id',$id_golongan); ?>
-           <!--  <input type="text" class="form-control" name="id_golongan" id="id_golongan" placeholder="Id Golongan" value="<?php echo $id_golongan; ?>" /> -->
+           <!--  <?php echo cmb_dinamis('id_golongan',' golongans','nama_gol','id',$id_golongan); ?> -->
         </div>
 	    <div class="form-group col-md-6">
             <label for="int" class="control-label">Ruang <?php echo form_error('id_ruang') ?></label>
             <?php echo cmb_dinamis('id_ruang',' ruangs','nama_ruang','id',$id_ruang); ?>
-            <!-- <input type="text" class="form-control" name="id_ruang" id="id_ruang" placeholder="Id Ruang" value="<?php echo $id_ruang; ?>" /> -->
+            <!--<?php echo cmb_dinamis('id_ruang',' ruangs','nama_ruang','id',$id_ruang); ?> -->
         </div>
 	    <div class="form-group col-md-6">
             <label for="int" class="control-label">Angka Kredit <?php echo form_error('id_angka_kredit') ?></label>

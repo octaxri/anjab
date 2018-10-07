@@ -9,7 +9,7 @@
       <!-- Default box -->
       <div class="box">
       
-        <div class="box-body">          <div class="box box-danger">
+        <div class="box-body">          <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Jabatan level opd <?php echo $button ?></h3>
             </div>
@@ -19,12 +19,12 @@
               
               
 	    <div class="form-group col-md-6">
-            <label for="int" class="control-label">Id Jabatan Level <?php echo form_error('id_jabatan_level') ?></label>
-            <input type="text" class="form-control" name="id_jabatan_level" id="id_jabatan_level" placeholder="Id Jabatan Level" value="<?php echo $id_jabatan_level; ?>" />
+            <label for="int" class="control-label">Jabatan Level <?php echo form_error('id_jabatan_level') ?></label>
+            <?php echo cmb_dinamis('id_jabatan_level',' jabatan_level','nama_level','id',$id_jabatan_level); ?>
         </div>
 	    <div class="form-group col-md-6">
-            <label for="int" class="control-label">Id Jenis Opd <?php echo form_error('id_jenis_opd') ?></label>
-            <input type="text" class="form-control" name="id_jenis_opd" id="id_jenis_opd" placeholder="Id Jenis Opd" value="<?php echo $id_jenis_opd; ?>" />
+            <label for="int" class="control-label">Jenis Opd <?php echo form_error('id_jenis_opd') ?></label>
+            <?php echo cmb_dinamis('id_jenis_opd',' jenis_opd','nama_jenis','id',$id_jenis_opd); ?>
         </div>
 	    <div class="form-group col-md-6">
             <label for="varchar" class="control-label">Nama <?php echo form_error('nama') ?></label>

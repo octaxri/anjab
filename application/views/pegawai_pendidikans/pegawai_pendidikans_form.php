@@ -9,7 +9,7 @@
       <!-- Default box -->
       <div class="box">
       
-        <div class="box-body">          <div class="box box-danger">
+        <div class="box-body">          <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Pegawai pendidikans <?php echo $button ?></h3>
             </div>
@@ -19,16 +19,16 @@
               
               
 	    <div class="form-group col-md-6">
-            <label for="varchar" class="control-label">Pegawai Id <?php echo form_error('pegawai_id') ?></label>
-            <input type="text" class="form-control" name="pegawai_id" id="pegawai_id" placeholder="Pegawai Id" value="<?php echo $pegawai_id; ?>" />
+            <label for="varchar" class="control-label">Pegawai <?php echo form_error('pegawai_id') ?></label>
+            <?php echo cmb_dinamis('pegawai_id','pegawais','nama','id',$pegawai_id); ?>
         </div>
 	    <div class="form-group col-md-6">
-            <label for="varchar" class="control-label">Jpendidikan Id <?php echo form_error('jpendidikan_id') ?></label>
-            <input type="text" class="form-control" name="jpendidikan_id" id="jpendidikan_id" placeholder="Jpendidikan Id" value="<?php echo $jpendidikan_id; ?>" />
+            <label for="varchar" class="control-label">Jpendidikan <?php echo form_error('jpendidikan_id') ?></label>
+            <?php echo cmb_dinamis('jpendidikan_id','jpendidikans','nama','id',$jpendidikan_id); ?>
         </div>
 	    <div class="form-group col-md-6">
-            <label for="varchar" class="control-label">Jurusan Id <?php echo form_error('jurusan_id') ?></label>
-            <input type="text" class="form-control" name="jurusan_id" id="jurusan_id" placeholder="Jurusan Id" value="<?php echo $jurusan_id; ?>" />
+            <label for="varchar" class="control-label">Jurusan <?php echo form_error('jurusan_id') ?></label>
+            <?php echo cmb_dinamis('jurusan_id','jurusans','nama_jurusan','id',$jurusan_id); ?>
         </div></div><div class="box-footer">
 	    <input type="hidden" name="id" value="<?php echo $id; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 

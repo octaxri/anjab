@@ -9,7 +9,7 @@
       <!-- Default box -->
       <div class="box">
       
-        <div class="box-body">          <div class="box box-danger">
+        <div class="box-body">          <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Jabatan opd <?php echo $button ?></h3>
             </div>
@@ -27,8 +27,8 @@
             <input type="text" class="form-control" name="id_jabatan_atas" id="id_jabatan_atas" placeholder="Id Jabatan Atas" value="<?php echo $id_jabatan_atas; ?>" />
         </div>
 	    <div class="form-group col-md-6">
-            <label for="int" class="control-label">Id Opd <?php echo form_error('id_opd') ?></label>
-            <input type="text" class="form-control" name="id_opd" id="id_opd" placeholder="Id Opd" value="<?php echo $id_opd; ?>" />
+            <label for="int" class="control-label">Opd <?php echo form_error('id_opd') ?></label>
+            <?php echo cmb_dinamis('id_opd',' opds','nama_opd','id',$id_opd); ?>
         </div></div><div class="box-footer">
 	    <input type="hidden" name="id" value="<?php echo $id; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
