@@ -17,7 +17,7 @@ class Jabatan_fungsional_syarat_pengangkatan_model extends CI_Model
 
     // datatables
     function json() {
-        $this->datatables->select('id,syarat');
+        $this->datatables->select('id,id_jabatan_fungsional_tambahan_keterangan,syarat,kode_syarat');
         $this->datatables->from('jabatan_fungsional_syarat_pengangkatan');
         //add this line for join
         //$this->datatables->join('table2', 'jabatan_fungsional_syarat_pengangkatan.field = table2.field');
@@ -42,7 +42,9 @@ class Jabatan_fungsional_syarat_pengangkatan_model extends CI_Model
     // get total rows
     function total_rows($q = NULL) {
         $this->db->like('id', $q);
+	$this->db->or_like('id_jabatan_fungsional_tambahan_keterangan', $q);
 	$this->db->or_like('syarat', $q);
+	$this->db->or_like('kode_syarat', $q);
 	$this->db->from($this->table);
         return $this->db->count_all_results();
     }
@@ -51,7 +53,9 @@ class Jabatan_fungsional_syarat_pengangkatan_model extends CI_Model
     function get_limit_data($limit, $start = 0, $q = NULL) {
         $this->db->order_by($this->id, $this->order);
         $this->db->like('id', $q);
+	$this->db->or_like('id_jabatan_fungsional_tambahan_keterangan', $q);
 	$this->db->or_like('syarat', $q);
+	$this->db->or_like('kode_syarat', $q);
 	$this->db->limit($limit, $start);
         return $this->db->get($this->table)->result();
     }

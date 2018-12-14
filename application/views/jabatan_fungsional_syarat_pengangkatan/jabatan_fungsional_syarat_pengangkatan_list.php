@@ -37,7 +37,9 @@
             <thead>
                 <tr>
                     <th width="80px">No</th>
+		    <th>Id Jabatan Fungsional Tambahan Keterangan</th>
 		    <th>Syarat</th>
+		    <th>Kode Syarat</th>
 		    <th width="">Action</th>
                 </tr>
             </thead>
@@ -83,7 +85,7 @@
                         {
                             "data": "id",
                             "orderable": false
-                        },{"data": "syarat"},
+                        },{"data": "id_jabatan_fungsional_tambahan_keterangan"},{"data": "syarat"},{"data": "kode_syarat"},
                         {
                             "data" : "action",
                             "orderable": false,

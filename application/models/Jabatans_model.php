@@ -24,6 +24,39 @@ class Jabatans_model extends CI_Model
         $this->datatables->add_column('action', anchor(site_url('jabatans/update/$1'),'<i class="fa fa-pencil"></i>','class="btn btn-warning btn-xs"' )." ".anchor(site_url('jabatans/delete/$1'),'<i class="fa fa-trash"></i>','class="btn btn-danger btn-xs" onclick="javasciprt: return confirm(\'Apakah Anda Yakin Menghapus Data Ini ?\')"'), 'id');
         return $this->datatables->generate();
     }
+    // datatables
+    function json_jabatan_struktural($id='') {
+        
+        if($id==''){
+            $this->db->select('jabatans.id,nama_jabatan,nama_opd');
+        //add this line for join
+        $this->db->where('jabatans.jenis',1);
+        $this->db->join('opds','opds.id=jabatans.opd_id');
+        }else{
+            $this->db->select('jabatans.id,nama_jabatan,nama_opd');
+        $this->db->where('jabatans.jenis',1);
+        $this->db->where('jabatans.opd_id',$id);
+        //add this line for join
+        $this->db->join('opds','opds.id=jabatans.opd_id');
+        }
+        
+        return $this->db->get($this->table)->result();
+    }
+    function json_jabatan_master($id='') {
+        
+        if($id==''){
+            $this->db->join('urusan','urusan.id=jabatans.id_urusan');
+                     $this->db->where('jabatans.status',null);
+                     $this->db->select('jabatans.id as id, urusan.nama_urusan as nama_urusan,jabatans.nama_jabatan as nama_jabatan,jabatans.tugas_jabatan as tugas_jabatan');
+        }else{
+            $this->db->join('urusan','urusan.id=jabatans.id_urusan');
+                     $this->db->where('jabatans.id_urusan',$id);
+                     $this->db->where('jabatans.status',null);
+                     $this->db->select('jabatans.id as id, urusan.nama_urusan as nama_urusan,jabatans.nama_jabatan as nama_jabatan,jabatans.tugas_jabatan as tugas_jabatan');
+        }
+        
+        return $this->db->get($this->table)->result();
+    }
 
     // get all
     function get_all()

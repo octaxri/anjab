@@ -44,3 +44,4 @@
         <script src="<?php echo base_url('assets/datatables/dataTables.bootstrap.js') ?>"></script>
         <!-- Latest compiled and minified JavaScript -->
     <script src="<?php echo base_url('assets/js/bootstrap-select.min.js'); ?>"></script>
+    <script src="<?php echo base_url(); ?>assets/bower_components/ckeditor/ckeditor.js"></script>

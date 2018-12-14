@@ -523,7 +523,7 @@
                 <li><a href="<?php echo base_url(); ?>jabatan_level_opd"><i class="fa fa-circle-o text-purple"></i>Data Jabatan Level OPD</a></li>
                 <li><a href="<?php echo base_url(); ?>urusan"><i class="fa fa-circle-o text-yellow"></i>Data Urusan Pemerintahan</a></li>
                 <li><a href="<?php echo base_url(); ?>kelas"><i class="fa fa-circle-o text-blue"></i>Data Kelas Jabatan</a></li>
-                <li><a href="<?php echo base_url(); ?>rumpunjabatan"><i class="fa fa-circle-o text-yellow"></i>Data Nama Pelaksana</a></li>
+                <li><a href="<?php echo base_url(); ?>rumpun_jabatan"><i class="fa fa-circle-o text-yellow"></i>Data Nama Pelaksana</a></li>
 
               </ul>
             </li>

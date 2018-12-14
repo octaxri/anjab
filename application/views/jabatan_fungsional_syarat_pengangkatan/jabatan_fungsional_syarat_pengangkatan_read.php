@@ -10,6 +10,8 @@
             </div>
         </div>
         <table class="table">
+	    <tr><td>Id Jabatan Fungsional Tambahan Keterangan</td><td><?php echo $id_jabatan_fungsional_tambahan_keterangan; ?></td></tr>
 	    <tr><td>Syarat</td><td><?php echo $syarat; ?></td></tr>
+	    <tr><td>Kode Syarat</td><td><?php echo $kode_syarat; ?></td></tr>
 	    <tr><td></td><td><a href="<?php echo site_url('jabatan_fungsional_syarat_pengangkatan') ?>" class="btn btn-default">Cancel</a></td></tr>
 	</table><?php $this->load->view('templates/footer');?>

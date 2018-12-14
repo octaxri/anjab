@@ -22,9 +22,11 @@ $string .= '          <div class="box box-danger">
               <div class="row">
               
               ';
+              $cke ="";
 foreach ($non_pk as $row) {
     if ($row["data_type"] == 'text')
     {
+      $cke .= "CKEDITOR.replace('".$row["column_name"]."')";
     $string .= "\n\t    <div class=\"form-group col-md-6\">
             <label for=\"".$row["column_name"]."\" class=\"control-label\">".label($row["column_name"])." <?php echo form_error('".$row["column_name"]."') ?></label>
             <textarea class=\"form-control\" rows=\"3\" name=\"".$row["column_name"]."\" id=\"".$row["column_name"]."\" placeholder=\"".label($row["column_name"])."\"><?php echo $".$row["column_name"]."; ?></textarea>
@@ -59,7 +61,15 @@ $string .= "\n\t    <a href=\"<?php echo site_url('".$c_url."') ?>\" class=\"btn
 ';
 
 $string .= "<?php \$this->load->view('templates/footer');?>";
-
+$string .= "
+<script>
+  $(function () {
+    // Replace the <textarea id='editor1'> with a CKEditor
+    // instance, using default configuration.
+    ".$cke."
+    //bootstrap WYSIHTML5 - text editor
+  })
+</script>";
 $hasil_view_form = createFile($string, $target."views/" . $c_url . "/" . $v_form_file);
 
 ?>

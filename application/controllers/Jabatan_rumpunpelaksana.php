@@ -45,15 +45,26 @@ class Jabatan_rumpunpelaksana extends CI_Controller
         }
     }
 
-    public function create() 
+    public function create($id='') 
     {
+        if ($id=='') {
         $data = array(
             'button' => 'Create',
             'action' => site_url('jabatan_rumpunpelaksana/create_action'),
-	    'id' => set_value('id'),
-	    'id_jabatan' => set_value('id_jabatan'),
-	    'id_kelas' => set_value('id_kelas'),
-	);
+        'id' => set_value('id'),
+        'id_jabatan' => set_value('id_jabatan'),
+        'id_kelas' => set_value('id_kelas'),
+    );    
+        }else{
+      $data = array(
+            'button' => 'Create',
+            'action' => site_url('jabatan_rumpunpelaksana/create_action'),
+        'id' => set_value('id'),
+        'id_jabatan' => $id,
+        'id_kelas' => set_value('id_kelas'),
+    );      
+        }
+        
         $this->load->view('jabatan_rumpunpelaksana/jabatan_rumpunpelaksana_form', $data);
     }
     

@@ -18,7 +18,20 @@ class Jabatans extends CI_Controller
         }        
 	$this->load->library('datatables');
     }
-
+    //-------------------------------------------jabatan struktural-----------------------------
+    public function jabatan_struktural($id='')
+    {
+        $data['jabatan']=$this->Jabatans_model->json_jabatan_struktural($id);
+        $this->load->view('jabatan_struktural/jabatan_struktural_list',$data);
+    }
+    //------------------------------------------------------------------------------------------
+      //-------------------------------------------jabatan master-----------------------------
+    public function jabatan_master($id='')
+    {
+        $data['jabatan']=$this->Jabatans_model->json_jabatan_master($id);
+        $this->load->view('jabatans/jabatan_master_list',$data);
+    }
+    //------------------------------------------------------------------------------------------
     public function index()
     {
         $this->load->view('jabatans/jabatans_list');
